@@ -1,0 +1,46 @@
+=====>>> Calculated Measures we performed for this project <<<=====
+
+
+==> Average Metascore = AVERAGE('IMDB-Movie-Data'[Metascore])
+
+==> Average Metascore By Genre = AVERAGE('IMDB-Movie-Data'[Metascore])
+
+==> Average rating = AVERAGE('IMDB-Movie-Data'[Rating])
+
+==> Average Rating By Genre = AVERAGE('IMDB-Movie-Data'[Rating])
+
+==> Average Rating per Year = AVERAGE('IMDB-Movie-Data'[Rating])
+
+==> Average Revenue = AVERAGE('IMDB-Movie-Data'[Revenue (Millions)])
+
+==> Average runtime in minutes = AVERAGE('IMDB-Movie-Data'[Runtime (Minutes)])
+
+==> Average Votes By Genre = AVERAGE('IMDB-Movie-Data'[Votes])
+
+==> Average Votes Per Year = AVERAGE('IMDB-Movie-Data'[Votes])
+
+==> Avg Runtime per Year = AVERAGE('IMDB-Movie-Data'[Runtime (Minutes)])
+
+==> Highest Revenue = MAX('IMDB-Movie-Data'[Revenue (Millions)])
+
+==> Movies per Year = COUNTROWS('IMDB-Movie-Data')
+
+==> Revenue By Director = SUM('IMDB-Movie-Data'[Revenue (Millions)])
+
+==> Revenue per Year = SUM('IMDB-Movie-Data'[Revenue (Millions)])
+
+==> Top 10 Revenue Movies = 
+    CALCULATE(
+        SUM('IMDB-Movie-Data'[Revenue (Millions)]),
+        TOPN(10, 'IMDB-Movie-Data', 'IMDB-Movie-Data'[Revenue (Millions)], DESC)
+    )
+
+==> Total Genres 1 = DISTINCTCOUNT('IMDB-Movie-Data'[Genre.1])
+
+==> Total Movies = COUNTROWS('IMDB-Movie-Data')
+
+==> Total Revenue = SUM('IMDB-Movie-Data'[Revenue (Millions)])
+
+==> Unique Actors = DISTINCTCOUNT('IMDB-Movie-Data'[Actors])
+
+==> Total votes = SUM('IMDB-Movie-Data'[Votes])
